@@ -1,10 +1,17 @@
 'use client';
 
+import { useState } from 'react';
 import Header from '../app/components/Header';
+import SectionHome from './components/Section/SectionHome';
+import SectionInfo from './components/Section/SectionInfo';
 import '../app/globals.css';
 
-
 export default function Home() {
+  const [activeSection, setActiveSection] = useState('section-info');
+
+  const handleNavClick = (section) => {
+    setActiveSection(section);
+  };
 
   return (
     <div className="body">
@@ -12,6 +19,7 @@ export default function Home() {
       <div className="content-wrapper">
         <main>
           <h4>제작중</h4>
+          {activeSection === 'section-info' && <SectionInfo />}
         </main>
       </div>
       <footer>

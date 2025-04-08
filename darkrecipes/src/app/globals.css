@@ -182,6 +182,24 @@ main {
   border-radius: 10px;
 }
 
+/* Component Styles */
+.component-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-nav {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+/* Section Styles */
+section {
+  padding: 1.5rem;
+}
+
 /* Footer Styles */
 footer {
   position: fixed;
