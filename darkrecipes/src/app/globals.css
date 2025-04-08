@@ -1,0 +1,214 @@
+/* Global Styles */
+:root {
+  --header-color: rgb(245, 118, 176);
+  --bb-color: #FFB6C1; 
+  --c-color: #DB7093;
+  --hover-color: rgba(253,46,139,.5);
+  --footer-color: #e75a84;
+
+  --grad1-color : #FF69B4;
+  --grad2-color : #FF1493;
+  --grad3-color : #C71585;
+  --grad4-color : #DB7093;
+  --grad5-color : #FF69B4;
+
+  --font-color : #333;
+  --refont-color : #fff;
+  --content-color : #ffffff;
+}
+
+[data-theme='dark'] {
+  --header-color: rgb(60, 60, 60); 
+  --bb-color: rgba(0, 0, 0, 0.5); 
+  --c-color: #77758b;
+  --hover-color: rgba(255, 105, 180, .5); 
+  --footer-color: #a7a7a7; 
+
+  --grad1-color: #8A2BE2; 
+  --grad2-color: #6A5ACD;
+  --grad3-color: #4B0082;
+  --grad4-color: #9400D3;
+  --grad5-color: #9932CC;
+
+  --font-color : #fff;
+  --refont-color : #333;
+  --content-color : #555;
+}
+
+
+[data-theme='brown']  {
+  --header-color: rgb(204, 85, 0); 
+  --bb-color: #FFB84D; 
+  --c-color: #967c67; 
+  --hover-color: rgba(255, 81, 0, 0.5); 
+  --footer-color: #6A4E4C; 
+
+  --grad1-color : #CC5500;
+  --grad2-color : #FFB84D;
+  --grad3-color : #BFAF9D;
+  --grad4-color : #6A4E4C;
+  --grad5-color : #FF8C00;
+
+  --font-color : #333;
+  --refont-color : #fff;
+  --content-color : #ffffff;
+}
+
+[data-theme='green'] {
+  --header-color: #80AF81; 
+  --bb-color: #abeeb0; 
+  --c-color: #508D4E; 
+  --hover-color: rgba(105, 143, 106, 0.5); 
+  --footer-color: #1A5319; 
+
+  --grad1-color: #D6EFD8; 
+  --grad2-color: #80AF81; 
+  --grad3-color: #508D4E; 
+  --grad4-color: #1A5319; 
+  --grad5-color: #32462e; 
+
+  --font-color : #333;
+  --refont-color : #fff;
+  --content-color : #ffffff;
+}
+
+[data-theme='blue'] {
+  --header-color: #5356FF;
+  --bb-color: #a2dcf7;
+  --c-color: #67C6E3;
+  --hover-color: rgba(55, 140, 231, 0.5);
+  --footer-color: #378CE7;
+
+  --grad1-color: #5356FF;
+  --grad2-color: #378CE7;
+  --grad3-color: #67C6E3;
+  --grad4-color: #A0D8E8;
+  --grad5-color: #89b9cf;
+
+  --font-color : #333;
+  --refont-color : #fff;
+  --content-color : #ffffff;
+}
+
+[data-theme='yellow'] {
+  --header-color: #FFB800;
+  --bb-color: #FFD966;
+  --c-color: #B38B4D;
+  --hover-color: rgba(255, 204, 0, 0.5);
+  --footer-color: #b6922f;
+  
+  --grad1-color: #FFCC00;
+  --grad2-color: #FFD966;
+  --grad3-color: #FFEB3B;
+  --grad4-color: #F1C232;
+  --grad5-color: #FF9800;
+
+  --font-color: #333;
+  --refont-color: #fff;
+  --content-color: #fff;
+}
+
+[data-theme='neutral'] {
+  --header-color: #B0A99F; 
+  --bb-color: #D0D4D3;   
+  --c-color: #7D7F6D;   
+  --hover-color: rgba(180, 180, 180, 0.5); 
+  --footer-color: #A0A39D; 
+
+  --grad1-color: #D0D4D3;  
+  --grad2-color: #B0A99F;  
+  --grad3-color: #7D7F6D;  
+  --grad4-color: #A0A39D;  
+  --grad5-color: #C3C8C1;  
+
+  --font-color: #333;      
+  --refont-color: #fff;    
+  --content-color: #fff;   
+}
+  
+
+
+[data-theme='earthy'] {
+  --header-color: #8E9A7D; 
+  --bb-color: #A3B18C;     
+  --c-color: #6D7C4E;      
+  --hover-color: rgba(145, 154, 125, 0.5); 
+  --footer-color: #5E6A47; 
+
+  --grad1-color: #A3B18C;  
+  --grad2-color: #8E9A7D;  
+  --grad3-color: #6D7C4E;  
+  --grad4-color: #5E6A47;  
+  --grad5-color: #A3B18C;  
+
+  --font-color: #333;      
+  --refont-color: #fff;    
+  --content-color: #fff;   
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* scrollbar-gutter: stable; */
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bb-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: var(--font-color);
+  font-size: 1.4rem;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 45px;
+}
+
+main {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+/* Footer Styles */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 1rem;
+  background-color: var(--footer-color);
+  color: white;
+  font-size: 1.4rem;
+}
+
+footer i {
+  color: #ff7b00;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+  .content-wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  main {
+    width: 100%;
+    min-height: auto;
+  }
+}

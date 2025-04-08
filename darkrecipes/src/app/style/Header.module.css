@@ -1,0 +1,169 @@
+/* styles/Header.module.css */
+.header {
+  background-color: var(--header-color);
+  padding: 1.5rem;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto; /* 중앙 정렬 */
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 23rem;
+}
+
+.mainTitle {
+  background-color: #fff;
+  text-decoration: none;
+  outline: none;
+  padding: 0.3rem 1.7rem;
+  border-radius: 20px;
+}
+
+.gradientText {
+  /* font-size: 2.4rem; */
+  font-weight: bold;
+  background-image: linear-gradient(
+    to right,
+    var(--grad1-color),
+    var(--grad2-color),
+    var(--grad3-color),
+    var(--grad4-color),
+    var(--grad5-color)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+
+  animation: shine 2s linear infinite;
+}
+
+.gradientText>span:nth-child(1){
+  font-size: 2.4rem;
+}
+.gradientText>span:nth-child(2){
+  font-size: 0.8rem;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+}
+
+.darkBtn {
+  font-size: 1.8rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: dotted 2px white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorBtn {
+  font-size: 1.8rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: solid 1px white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navList {
+  list-style-type: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navList li {
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  transition: width 1s ease, background-color 1s ease, color 1s ease;
+  width: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.navList i {
+  width: 35px;
+  text-align: center;
+}
+
+.navList span {
+  width: 70px;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+/* 호버 효과는 큰 화면에서만 적용 */
+@media (min-width: 1024px) {
+  .navList li:hover {
+    background-color: white;
+    color: var(--c-color);
+    width: 100px;
+  }
+
+  .navList li:hover span {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .headerContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .titleContainer {
+    width: 100%;
+  }
+
+  .navList {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .navList span {
+    display: none;
+  }
+
+  .gradientText {
+    font-size: 2.4rem;
+  }
+
+  .navList li {
+    width: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
